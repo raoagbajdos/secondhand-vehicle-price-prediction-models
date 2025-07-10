@@ -1,0 +1,36 @@
+# Configuration for classification models
+brands:
+  - mercedes
+  - ford
+  - fiat
+  - toyota
+  - tesla
+  - audi
+  - bmw
+  - honda
+
+model_name: random_forest
+
+hyperparameters:
+  n_estimators: 100
+  max_depth: 10
+  min_samples_split: 5
+  min_samples_leaf: 2
+  random_state: 42
+
+# Data settings
+data:
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+
+# Training settings
+training:
+  cv_folds: 5
+  save_model: true
+
+# Optuna hyperparameter optimization (optional)
+optuna:
+  enabled: false
+  n_trials: 100
+  study_name: classification_optimization
